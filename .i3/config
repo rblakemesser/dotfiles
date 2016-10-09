@@ -155,6 +155,18 @@ for_window [class="^Spotify$"] floating enable  # https://faq.i3wm.org/question/
 for_window [class="^Shutter$"] floating enable  # https://faq.i3wm.org/question/2759/open-a-program-in-floating-mode-just-once/
 for_window [class="jetbrains-pycharm"] border normal
 
+# https://github.com/ValveSoftware/steam-for-linux/issues/1040
+for_window [class="^Steam$" title="^Friends$"] floating enable
+for_window [class="^Steam$" title="Steam - News"] floating enable
+for_window [class="^Steam$" title=".* - Chat"] floating enable
+for_window [class="^Steam$" title="^Settings$"] floating enable
+for_window [class="^Steam$" title=".* - event started"] floating enable
+for_window [class="^Steam$" title=".* CD key"] floating enable
+for_window [class="^Steam$" title="^Steam - Self Updater$"] floating enable
+for_window [class="^Steam$" title="^Screenshot Uploader$"] floating enable
+for_window [class="^Steam$" title="^Steam Guard - Computer Authorization Required$"] floating enable
+for_window [title="^Steam Keyboard$"] floating enable
+
 # app assignments
 assign [class="^Spotify$"] 2
 assign [class="jetbrains-pycharm"] 5
@@ -165,4 +177,8 @@ assign [class="Google-chrome"] 1
 exec bash ~/.xinitrc
 exec --no-startup-id /usr/lib/gnome-settings-daemon/gnome-settings-daemon  # ssh keychain
 focus_follows_mouse no
+
+# network manager applet
+exec --no-startup-id nm-applet
+exec --no-startup-id xscreensaver
 
