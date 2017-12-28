@@ -182,3 +182,6 @@ focus_follows_mouse no
 exec --no-startup-id nm-applet
 exec --no-startup-id xscreensaver
 
+bindsym $mod+comma exec amixer set Master -q 5%-
+bindsym $mod+period exec amixer set Master -q 5%+
+
