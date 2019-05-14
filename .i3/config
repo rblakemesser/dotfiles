@@ -56,7 +56,10 @@ bindsym $mod+Shift+K move up
 bindsym $mod+Shift+L move right
 
 # lock screen
-bindsym $mod+Control+l exec xscreensaver-command -lock
+bindsym $mod+Control+l exec gnome-screensaver-command -l
+
+# bind flameshot to printscreen for a screenshot tool
+bindsym Print exec flameshot gui
 
 # marks
 bindsym $mod+m exec i3-input -F 'mark %s' -l 1 -P 'Mark: '
@@ -151,7 +154,7 @@ bar {
 }
 
 # app-specific behaviors
-for_window [class="^Spotify$"] floating enable  # https://faq.i3wm.org/question/2759/open-a-program-in-floating-mode-just-once/
+# for_window [class="^Spotify$"] floating enable  # https://faq.i3wm.org/question/2759/open-a-program-in-floating-mode-just-once/
 for_window [class="^Shutter$"] floating enable  # https://faq.i3wm.org/question/2759/open-a-program-in-floating-mode-just-once/
 for_window [class="jetbrains-pycharm"] border normal
 
